@@ -49,8 +49,6 @@ class _HomePageWebState extends State<HomePageWeb> {
       data1Str = '20$data1Str';
       data2Str = '$data2Str';
 
-
-      int menos = int.parse(data1Str) - int.parse(data2Str);
       int tempo = YearInit - year;
 
       if(tempo <= -1){
@@ -574,7 +572,7 @@ class _HomePageWebState extends State<HomePageWeb> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () async {
-          final String url = 'https://wa.me/5511942980456';
+          const String url = 'https://wa.me/5511942980456';
 
           html.window.open(url, '_blank');
         },
