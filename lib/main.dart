@@ -275,9 +275,9 @@ class _HomePageWebState extends State<HomePageWeb> {
                   ),
                   borderRadius: const BorderRadius.all(Radius.circular(5.0)),
                 ),
-                child: Column(
+                child: const Column(
                   children: [
-                    const Text(
+                    Text(
                         'Nossos projetos:',
                       style: TextStyle(
                         fontSize: 20,
