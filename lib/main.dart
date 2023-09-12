@@ -1,5 +1,6 @@
 import 'package:fluid_kit/fluid_kit.dart';
 import 'package:flutter/material.dart';
+import 'dart:html' as html;
 
 String DateTimeWorked = '';
 
@@ -95,7 +96,10 @@ class _HomePageWebState extends State<HomePageWeb> {
                           child: Center(
                             child: Container(
                                 padding: const EdgeInsets.all(20),
-                                child: Image.network('https://pbs.twimg.com/media/DIXbweqXkAEUcVs.jpg')
+                                child: Image.asset(
+                                    'assets/images/hrslogo.jpg',
+                                  scale: 5,
+                                )
                             ),
                           ),
                         ),
@@ -275,19 +279,309 @@ class _HomePageWebState extends State<HomePageWeb> {
                   ),
                   borderRadius: const BorderRadius.all(Radius.circular(5.0)),
                 ),
-                child: const Column(
+                child: Column(
                   children: [
-                    Text(
+                    const Text(
                         'Nossos projetos:',
                       style: TextStyle(
                         fontSize: 20,
                       ),
                     ),
+                    Container(
+                      decoration: BoxDecoration(
+                        border: Border.all(
+                          color: Colors.white,
+                          width: 2.0,
+                        ),
+                        borderRadius: const BorderRadius.all(Radius.circular(5.0)),
+                      ),
+                      child: Fluid(
+                        children: [
+                          Fluidable(
+                            fluid: 1,
+                            minWidth: 200,
+                            child: Container(
+                              padding: const EdgeInsets.all(16),
+                              child: Column(
+                                children: [
+                                  const Text(
+                                    'Minhas Anotações',
+                                    style: TextStyle(
+                                        fontSize: 20,
+                                        fontWeight: FontWeight.bold
+                                    ),
+                                  ),
+                                  Image.asset(
+                                    'assets/images/Imagem do WhatsApp de 2023-09-12 à(s) 17.02.10.jpg',
+                                    scale: 3,
+                                  )
+                                ],
+                              ),
+                            ),
+                          ),
+                          Fluidable(
+                            fluid: 2,
+                            minWidth: 450,
+                            child: Column(
+                              children: [
+                                Container(
+                                  padding: const EdgeInsets.all(16),
+                                  child: const Text(
+                                      'Um Aplicativo de anotações, simples, rapido e pratico, disponivel em Android, Windows e Linux',
+                                    style: TextStyle(
+                                      fontSize: 15,
+                                    ),
+                                  ),
+                                ),
+                                Container(
+                                  padding: const EdgeInsets.all(16),
+                                  child: ElevatedButton(onPressed: (){
+
+                                    const String url = 'https://play.google.com/store/apps/details?id=com.hrs.flutter.minhasanotacoesextended';
+
+                                    html.window.open(url, '_blank');
+
+                                  }, child: const Text('Baixe agora!'),
+                                  )
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Container(
+                      decoration: BoxDecoration(
+                        border: Border.all(
+                          color: Colors.white,
+                          width: 2.0,
+                        ),
+                        borderRadius: const BorderRadius.all(Radius.circular(5.0)),
+                      ),
+                      child: Fluid(
+                        children: [
+                          Fluidable(
+                            fluid: 1,
+                            minWidth: 200,
+                            child: Container(
+                              padding: const EdgeInsets.all(16),
+                              child: Column(
+                                children: [
+                                  const Text(
+                                    'Arbor',
+                                    style: TextStyle(
+                                        fontSize: 20,
+                                        fontWeight: FontWeight.bold
+                                    ),
+                                  ),
+                                  Image.asset(
+                                    'assets/images/Imagem do WhatsApp de 2023-09-12 à(s) 17.02.11.jpg',
+                                    scale: 3,
+                                  )
+                                ],
+                              ),
+                            ),
+                          ),
+                          Fluidable(
+                            fluid: 2,
+                            minWidth: 450,
+                            child: Column(
+                              children: [
+                                Container(
+                                  padding: const EdgeInsets.all(16),
+                                  child: const Text(
+                                    'Um aplicativo de encontros com diversas funções para conversas e encontros',
+                                    style: TextStyle(
+                                      fontSize: 15,
+                                    ),
+                                  ),
+                                ),
+                                Container(
+                                    padding: const EdgeInsets.all(16),
+                                    child: ElevatedButton(onPressed: (){
+
+                                      const String url = 'https://play.google.com/store/apps/details?id=com.herorickystudios.flutter.arbor';
+
+                                      html.window.open(url, '_blank');
+
+                                    }, child: const Text('Baixe agora!'),
+                                    )
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Container(
+                      decoration: BoxDecoration(
+                        border: Border.all(
+                          color: Colors.white,
+                          width: 2.0,
+                        ),
+                        borderRadius: const BorderRadius.all(Radius.circular(5.0)),
+                      ),
+                      child: Fluid(
+                        children: [
+                          Fluidable(
+                            fluid: 1,
+                            minWidth: 200,
+                            child: Container(
+                              padding: const EdgeInsets.all(16),
+                              child: Column(
+                                children: [
+                                  const Text(
+                                    'GLK Controls',
+                                    style: TextStyle(
+                                        fontSize: 20,
+                                        fontWeight: FontWeight.bold
+                                    ),
+                                  ),
+                                  Image.asset(
+                                    'assets/images/Imagem do WhatsApp de 2023-09-12 à(s) 17.03.06.jpg',
+                                    scale: 3,
+                                  )
+                                ],
+                              ),
+                            ),
+                          ),
+                          Fluidable(
+                            fluid: 2,
+                            minWidth: 450,
+                            child: Column(
+                              children: [
+                                Container(
+                                  padding: const EdgeInsets.all(16),
+                                  child: const Text(
+                                    'Um aplicativo de controle de entrada e saida de veiculos com controle de cancela',
+                                    style: TextStyle(
+                                      fontSize: 15,
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
                   ],
+                ),
+              ),
+              Container(
+                width: double.infinity,
+                padding: const EdgeInsets.all(16),
+                child: Container(
+                  decoration: BoxDecoration(
+                    border: Border.all(
+                      color: Colors.white,
+                      width: 2.0,
+                    ),
+                    borderRadius: const BorderRadius.all(Radius.circular(5.0)),
+                  ),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      const Text(
+                          'Nossa loja sempre inovando',
+                        style: TextStyle(
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold
+                        ),
+                      ),
+                      const Text(
+                        'Com os melhores apps da Playstore!',
+                        style: TextStyle(
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold
+                        ),
+                      ),
+                      Container(
+                        padding: const EdgeInsets.all(16),
+                        child: TextButton(onPressed: (){
+                          const String url = 'https://play.google.com/store/apps/dev?id=5081857601005320143';
+
+                          html.window.open(url, '_blank');
+                        },
+                            child: Image.asset(
+                              'assets/images/the herorickystudios loja.jpg',
+                              scale: 3,
+                            )
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              Container(
+                width: double.infinity,
+                padding: const EdgeInsets.all(22),
+                color: Colors.black,
+                child: Center(
+                    child: Column(
+                      children: [
+                          Row(
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Container(
+                                padding: const EdgeInsets.all(16),
+                                    child: TextButton(onPressed: (){
+                                      const String url = 'https://www.instagram.com/herorickystudios/';
+
+                                      html.window.open(url, '_blank');
+                                    }, child: Image.asset(
+                                        'assets/images/logos/instagram.png',
+                                      scale: 15,
+                                    )
+                                ),
+                              ),
+                              Container(
+                                padding: const EdgeInsets.all(16),
+                                child: TextButton(onPressed: (){
+                                  const String url = 'https://wa.me/5511942980456';
+
+                                  html.window.open(url, '_blank');
+                                }, child: Image.asset(
+                                  'assets/images/logos/whatsapp.png',
+                                  scale: 15,
+                                )
+                                ),
+                              ),
+                              Container(
+                                padding: const EdgeInsets.all(16),
+                                child: TextButton(onPressed: (){
+                                  const String url = 'https://youtube.com/@herorickygames';
+
+                                  html.window.open(url, '_blank');
+                                }, child: Image.asset(
+                                  'assets/images/logos/youtube.png',
+                                  scale: 15,
+                                )
+                                ),
+                              ),
+                            ],
+                          ),
+                        const Text('Copyright© HeroRickyStudios - 2023'),
+                      ],
+                    )
                 ),
               )
             ],
           ),
+        ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () async {
+          final String url = 'https://wa.me/5511942980456';
+
+          html.window.open(url, '_blank');
+        },
+        backgroundColor: Colors.transparent,
+        child: Image.asset(
+            'assets/images/logos/whatsapp green.png',
+          scale: 1,
         ),
       ),
     );
