@@ -39,7 +39,7 @@ class _HomePageWebState extends State<HomePageWeb> {
       int month = DateTime.now().month;
       int year = DateTime.now().year;
 
-      int TudoJunto = int.parse("$Day$month$year");
+      int TudoJunto = int.parse("$Day${0}$month$year");
 
       // Converta as datas em strings
       String data1Str = DateInit.toString();
@@ -47,9 +47,10 @@ class _HomePageWebState extends State<HomePageWeb> {
 
       // Adicione "20" ao ano para ajustar para o formato "yyyy"
       data1Str = '20$data1Str';
-      data2Str = '$data2Str';
+      data2Str = data2Str;
 
-      int tempo = YearInit - year;
+
+      int tempo = year - YearInit;
 
       if(tempo <= -1){
         setState(() {
