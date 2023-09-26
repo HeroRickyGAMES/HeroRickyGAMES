@@ -58627,10 +58627,10 @@ o=A.bb(k,A.dB(A.b([B.KX,n,m,A.bb(k,A.OM(A.b([A.km(A.bb(k,A.dB(A.b([B.L0,A.iT("as
 l=A.k0(B.h,2)
 return new A.rR(new A.oD(B.KN,10,B.l,B.xP,new A.HF(k,k,1/0,56),k),A.iF(new A.Cs(A.dB(A.b([s,r,o,A.bb(k,A.bb(k,A.dB(A.b([B.L2,B.KR,A.bb(k,A.Wd(A.iT("assets/images/the herorickystudios loja.jpg",3),new A.a_0()),k,k,k,k,B.I,k)],q),B.a1,B.dV),k,new A.cl(k,k,l,B.b0,k,k,B.ad),k,k,k,k),k,k,k,k,B.I,1/0),A.bb(k,A.iF(A.dB(A.b([A.a92(A.b([A.bb(k,A.Wd(A.iT("assets/images/logos/instagram.png",15),new A.a_1()),k,k,k,k,B.I,k),A.bb(k,A.Wd(A.iT("assets/images/logos/whatsapp.png",15),new A.a_2()),k,k,k,k,B.I,k),A.bb(k,A.Wd(A.iT("assets/images/logos/youtube.png",15),new A.a_3()),k,k,k,k,B.I,k)],q),B.a1,B.dV,B.h6),B.KV],q),B.a1,B.aj),k,k),B.l,k,k,k,B.yG,1/0)],q),B.a1,B.aj),k),k,k),A.a7E(B.H,A.iT("assets/images/logos/whatsapp green.png",1),!1,new A.a_4()),k)}}
 A.ZV.prototype={
-$0(){var s,r=Date.now(),q=Date.now(),p=A.a8O(new A.eR(Date.now(),!1)),o=A.hr(""+A.a8M(new A.eR(r,!1))+A.a8N(new A.eR(q,!1))+p,null)
+$0(){var s,r=Date.now(),q=Date.now(),p=A.a8O(new A.eR(Date.now(),!1)),o=A.hr(""+A.a8M(new A.eR(r,!1))+"0"+A.a8N(new A.eR(q,!1))+p,null)
 B.f.h(190922)
 B.f.h(o)
-s=2022-p
+s=p-2022
 if(s<=-1)this.a.ao(new A.ZW())
 else if(s===1)this.a.ao(new A.ZX(s))
 else if(s>2)this.a.ao(new A.ZY(s))},
