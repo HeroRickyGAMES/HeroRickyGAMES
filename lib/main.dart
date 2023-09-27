@@ -1,18 +1,17 @@
 import 'package:fluid_kit/fluid_kit.dart';
 import 'package:flutter/material.dart';
+import 'package:seo/head_tag.dart';
 import 'dart:html' as html;
+
+import 'package:seo/html/seo_controller.dart';
+import 'package:seo/html/seo_widget.dart';
+import 'package:seo/html/tree/widget_tree.dart';
 
 String DateTimeWorked = '';
 
 void main(){
   runApp(
-    MaterialApp(
-      theme: ThemeData(
-        useMaterial3: true,
-        brightness: Brightness.dark
-      ),
-      home: const HomePageWeb(),
-    ),
+      const HomePageWeb(),
   );
 }
 class HomePageWeb extends StatefulWidget {
@@ -71,516 +70,179 @@ class _HomePageWebState extends State<HomePageWeb> {
       }
     }
     VerificarQuantosAnosEstouDesenvolvendo();
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('HeroRickyStudios'),
-        backgroundColor: Colors.red[800],
-        shadowColor: Colors.black,
-        elevation: 10,
-      ),
-      body: Center(
-        child: SingleChildScrollView(
-          child: Column(
-            children: [
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Center(
-                    child: Fluid(
-                      children: [
-                        Fluidable(
-                          fluid: 1,
-                          minWidth: 200,
-                          child: Center(
-                            child: Container(
-                                padding: const EdgeInsets.all(20),
-                                child: Image.asset(
-                                    'assets/images/hrslogo.jpg',
-                                  scale: 5,
-                                )
-                            ),
-                          ),
-                        ),
-                        Fluidable(
-                          fluid: 2,
-                          minWidth: 450,
-                          child: Center(
-                            child: Container(
-                              padding: const EdgeInsets.all(16),
-                              child: Container(
-                                decoration: BoxDecoration(
-                                  border: Border.all(
-                                    color: Colors.white,
-                                    width: 2.0,
-                                  ),
-                                  borderRadius: const BorderRadius.all(Radius.circular(5.0)),
-                                ),
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.center,
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
-                                    Container(
-                                        padding: const EdgeInsets.all(20),
-                                        child: const Text(
-                                          'Somos a HeroRickyStudios!',
-                                          style: TextStyle(
-                                              fontSize: 24,
-                                              fontWeight: FontWeight.bold
-                                          ),
-                                        )
-                                    ),
-                                    Container(
-                                        padding: const EdgeInsets.all(20),
-                                        child: const Text(
-                                          'Desenvolvemos seu apicativo mesmo se seu negocio for grande ou pequeno!',
-                                          style: TextStyle(
-                                            fontSize: 15,
-                                          ),
-                                        )
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                  Container(
-                    padding: const EdgeInsets.all(16),
-                    child: Container(
-                      decoration: BoxDecoration(
-                        border: Border.all(
-                          color: Colors.white,
-                          width: 2.0,
-                        ),
-                        borderRadius: const BorderRadius.all(Radius.circular(5.0)),
-                      ),
-                      child: Column(
-                        children: [
-                          Container(
-                            padding: const EdgeInsets.all(16),
-                            child: const Text(
-                              'Desenvolvedor principal: Ricky Souza',
-                              style: TextStyle(
-                                fontSize: 20,
-                              ),
-                            ),
-                          ),
-                          Container(
-                            padding: const EdgeInsets.all(16),
-                            child: Text(
-                              "\"Sou um desenvolvedor Flutter Full Stack com $DateTimeWorked de experiência no desenvolvimento de aplicativos móveis, web e desktop usando o Flutter. Tenho paixão por tecnologia e estou sempre procurando novas maneiras de usar o Flutter para criar experiências incríveis para os usuários.\"",
-                              style: const TextStyle(
-                                fontSize: 15,
-                                fontStyle: FontStyle.italic,
-                              ),
-                            ),
-                          )
-                        ],
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-              Center(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Container(
-                      padding: const EdgeInsets.all(16),
-                      child: Container(
-                        decoration: BoxDecoration(
-                          border: Border.all(
-                            color: Colors.white,
-                            width: 2.0,
-                          ),
-                          borderRadius: const BorderRadius.all(Radius.circular(5.0)),
-                        ),
-                        child: Column(
-                          children: [
-                            Container(
-                              padding: const EdgeInsets.all(16),
-                              child: const Text(
-                                'Fazemos',
-                                style: TextStyle(
-                                    fontSize: 20,
-                                    fontWeight: FontWeight.bold
-                                ),
-                              ),
-                            ),
-                            Container(
-                              padding: const EdgeInsets.all(16),
-                              child: const Text(
-                                "Aplicativos de listas",
-                                style: TextStyle(
-                                  fontSize: 15,
-                                  fontStyle: FontStyle.italic,
-                                ),
-                              ),
-                            ),
-                            Container(
-                              padding: const EdgeInsets.all(16),
-                              child: const Text(
-                                "Aplicativos de entregas",
-                                style: TextStyle(
-                                  fontSize: 15,
-                                  fontStyle: FontStyle.italic,
-                                ),
-                              ),
-                            ),
-                            Container(
-                              padding: const EdgeInsets.all(16),
-                              child: const Text(
-                                "Do tipo utilidade",
-                                style: TextStyle(
-                                  fontSize: 15,
-                                  fontStyle: FontStyle.italic,
-                                ),
-                              ),
-                            ),
-                            Container(
-                              padding: const EdgeInsets.all(16),
-                              child: const Text(
-                                "Com banco de dados.",
-                                style: TextStyle(
-                                  fontSize: 15,
-                                  fontStyle: FontStyle.italic,
-                                ),
-                              ),
-                            ),
-                            Container(
-                              padding: const EdgeInsets.all(16),
-                              child: const Text(
-                                "Projetos para Web, Windows e Android",
-                                style: TextStyle(
-                                  fontSize: 15,
-                                  fontStyle: FontStyle.italic,
-                                ),
-                              ),
-                            )
-                          ],
-                        ),
-                      ),
-                    ),
-                  ],
+
+    return SeoController(
+      enabled: true,
+      tree: WidgetTree(context: context),
+      child: MaterialApp(
+        theme: ThemeData(
+            useMaterial3: true,
+            brightness: Brightness.dark
+        ),
+        home: Scaffold(
+          appBar: AppBar(
+            title: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+            Container(
+              padding: const EdgeInsets.all(16),
+              child: Seo.image(
+              src: 'http://www.example.com/image.jpg',
+                alt: 'LogoMarca',
+                child: Image.asset(
+                    'assets/images/hrslogo.jpg',
+                  scale: 30,
                 ),
               ),
-              Container(
-                padding: const EdgeInsets.all(16),
-                decoration: BoxDecoration(
-                  border: Border.all(
-                    color: Colors.white,
-                    width: 2.0,
-                  ),
-                  borderRadius: const BorderRadius.all(Radius.circular(5.0)),
-                ),
-                child: Column(
-                  children: [
-                    const Text(
-                        'Nossos projetos:',
-                      style: TextStyle(
-                        fontSize: 20,
-                      ),
-                    ),
-                    Container(
-                      decoration: BoxDecoration(
-                        border: Border.all(
-                          color: Colors.white,
-                          width: 2.0,
-                        ),
-                        borderRadius: const BorderRadius.all(Radius.circular(5.0)),
-                      ),
-                      child: Fluid(
-                        children: [
-                          Fluidable(
-                            fluid: 1,
-                            minWidth: 200,
-                            child: Container(
-                              padding: const EdgeInsets.all(16),
-                              child: Column(
-                                children: [
-                                  const Text(
-                                    'Minhas Anotações',
-                                    style: TextStyle(
-                                        fontSize: 20,
-                                        fontWeight: FontWeight.bold
-                                    ),
-                                  ),
-                                  Image.asset(
-                                    'assets/images/Imagem do WhatsApp de 2023-09-12 à(s) 17.02.10.jpg',
-                                    scale: 3,
-                                  )
-                                ],
-                              ),
-                            ),
-                          ),
-                          Fluidable(
-                            fluid: 2,
-                            minWidth: 450,
-                            child: Column(
-                              children: [
-                                Container(
-                                  padding: const EdgeInsets.all(16),
-                                  child: const Text(
-                                      'Um Aplicativo de anotações, simples, rapido e pratico, disponivel em Android, Windows e Linux',
-                                    style: TextStyle(
-                                      fontSize: 15,
-                                    ),
-                                  ),
-                                ),
-                                Container(
-                                  padding: const EdgeInsets.all(16),
-                                  child: ElevatedButton(onPressed: (){
-
-                                    const String url = 'https://play.google.com/store/apps/details?id=com.hrs.flutter.minhasanotacoesextended';
-
-                                    html.window.open(url, '_blank');
-
-                                  }, child: const Text('Baixe agora!'),
-                                  )
-                                ),
-                              ],
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                    Container(
-                      decoration: BoxDecoration(
-                        border: Border.all(
-                          color: Colors.white,
-                          width: 2.0,
-                        ),
-                        borderRadius: const BorderRadius.all(Radius.circular(5.0)),
-                      ),
-                      child: Fluid(
-                        children: [
-                          Fluidable(
-                            fluid: 1,
-                            minWidth: 200,
-                            child: Container(
-                              padding: const EdgeInsets.all(16),
-                              child: Column(
-                                children: [
-                                  const Text(
-                                    'Arbor',
-                                    style: TextStyle(
-                                        fontSize: 20,
-                                        fontWeight: FontWeight.bold
-                                    ),
-                                  ),
-                                  Image.asset(
-                                    'assets/images/Imagem do WhatsApp de 2023-09-12 à(s) 17.02.11.jpg',
-                                    scale: 3,
-                                  )
-                                ],
-                              ),
-                            ),
-                          ),
-                          Fluidable(
-                            fluid: 2,
-                            minWidth: 450,
-                            child: Column(
-                              children: [
-                                Container(
-                                  padding: const EdgeInsets.all(16),
-                                  child: const Text(
-                                    'Um aplicativo de encontros com diversas funções para conversas e encontros',
-                                    style: TextStyle(
-                                      fontSize: 15,
-                                    ),
-                                  ),
-                                ),
-                                Container(
-                                    padding: const EdgeInsets.all(16),
-                                    child: ElevatedButton(onPressed: (){
-
-                                      const String url = 'https://play.google.com/store/apps/details?id=com.herorickystudios.flutter.arbor';
-
-                                      html.window.open(url, '_blank');
-
-                                    }, child: const Text('Baixe agora!'),
-                                    )
-                                ),
-                              ],
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                    Container(
-                      decoration: BoxDecoration(
-                        border: Border.all(
-                          color: Colors.white,
-                          width: 2.0,
-                        ),
-                        borderRadius: const BorderRadius.all(Radius.circular(5.0)),
-                      ),
-                      child: Fluid(
-                        children: [
-                          Fluidable(
-                            fluid: 1,
-                            minWidth: 200,
-                            child: Container(
-                              padding: const EdgeInsets.all(16),
-                              child: Column(
-                                children: [
-                                  const Text(
-                                    'GLK Controls',
-                                    style: TextStyle(
-                                        fontSize: 20,
-                                        fontWeight: FontWeight.bold
-                                    ),
-                                  ),
-                                  Image.asset(
-                                    'assets/images/Imagem do WhatsApp de 2023-09-12 à(s) 17.03.06.jpg',
-                                    scale: 3,
-                                  )
-                                ],
-                              ),
-                            ),
-                          ),
-                          Fluidable(
-                            fluid: 2,
-                            minWidth: 450,
-                            child: Column(
-                              children: [
-                                Container(
-                                  padding: const EdgeInsets.all(16),
-                                  child: const Text(
-                                    'Um aplicativo de controle de entrada e saida de veiculos com controle de cancela',
-                                    style: TextStyle(
-                                      fontSize: 15,
-                                    ),
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-              Container(
-                width: double.infinity,
-                padding: const EdgeInsets.all(16),
-                child: Container(
-                  decoration: BoxDecoration(
-                    border: Border.all(
-                      color: Colors.white,
-                      width: 2.0,
-                    ),
-                    borderRadius: const BorderRadius.all(Radius.circular(5.0)),
-                  ),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      const Text(
-                          'Nossa loja sempre inovando',
-                        style: TextStyle(
-                            fontSize: 20,
-                            fontWeight: FontWeight.bold
-                        ),
-                      ),
-                      const Text(
-                        'Com os melhores apps da Playstore!',
-                        style: TextStyle(
-                            fontSize: 20,
-                            fontWeight: FontWeight.bold
-                        ),
-                      ),
-                      Container(
-                        padding: const EdgeInsets.all(16),
-                        child: TextButton(onPressed: (){
-                          const String url = 'https://play.google.com/store/apps/dev?id=5081857601005320143';
-
-                          html.window.open(url, '_blank');
-                        },
-                            child: Image.asset(
-                              'assets/images/the herorickystudios loja.jpg',
-                              scale: 3,
-                            )
-                        ),
-                      ),
+            ),
+                Container(
+                  padding: const EdgeInsets.all(16),
+                  child: Seo.head(
+                    tags: [
+                      const MetaTag(name: 'title', content: 'H Technology'),
+                      const LinkTag(rel: 'canonical', href: 'http://www.example.com'),
                     ],
+                    child: const Text(
+                      'H Technology',
+                    ),
                   ),
                 ),
-              ),
-              Container(
-                width: double.infinity,
-                padding: const EdgeInsets.all(22),
-                color: Colors.black,
-                child: Center(
-                    child: Column(
-                      children: [
-                          Row(
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            mainAxisAlignment: MainAxisAlignment.center,
+              ],
+            ),
+            backgroundColor: Colors.red[800],
+            shadowColor: Colors.black,
+            elevation: 10,
+          ),
+          body: Center(
+            child: SingleChildScrollView(
+              child: Column(
+                children: [
+                  Fluid(
+                    children: [
+                      Fluidable(
+                        fluid: 1,
+                        minWidth: 200,
+                        child: Center(
+                          child: Column(
                             children: [
                               Container(
-                                padding: const EdgeInsets.all(16),
-                                    child: TextButton(onPressed: (){
-                                      const String url = 'https://www.instagram.com/herorickystudios/';
-
-                                      html.window.open(url, '_blank');
-                                    }, child: Image.asset(
-                                        'assets/images/logos/instagram.png',
-                                      scale: 15,
-                                    )
-                                ),
+                                padding: const EdgeInsets.all(20),
+                                child:
+                                Seo.text(
+                                    text: 'Somos a H Technology!',
+                                    child: const Text(
+                                      'Somos a H Technology!',
+                                      style: TextStyle(
+                                          fontSize: 24
+                                      ),
+                                    ),
+                                )
                               ),
                               Container(
-                                padding: const EdgeInsets.all(16),
-                                child: TextButton(onPressed: (){
-                                  const String url = 'https://wa.me/5511942980456';
-
-                                  html.window.open(url, '_blank');
-                                }, child: Image.asset(
-                                  'assets/images/logos/whatsapp.png',
-                                  scale: 15,
-                                )
-                                ),
-                              ),
-                              Container(
-                                padding: const EdgeInsets.all(16),
-                                child: TextButton(onPressed: (){
-                                  const String url = 'https://youtube.com/@herorickygames';
-
-                                  html.window.open(url, '_blank');
-                                }, child: Image.asset(
-                                  'assets/images/logos/youtube.png',
-                                  scale: 15,
-                                )
+                                padding: const EdgeInsets.all(20),
+                                child: Seo.text(
+                                  text: 'Desenvolvemos seu aplicativo!',
+                                  child: const Text(
+                                    'Desenvolvemos seu aplicativo!',
+                                    style: TextStyle(
+                                        fontSize: 24
+                                    ),
+                                  ),
                                 ),
                               ),
                             ],
                           ),
-                        const Text('Copyright© HeroRickyStudios - 2023'),
-                      ],
-                    )
-                ),
-              )
-            ],
-          ),
-        ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () async {
-          const String url = 'https://wa.me/5511942980456';
+                        ),
+                      ),
+                      Fluidable(
+                        fluid: 2,
+                        minWidth: 450,
+                        child: Center(
+                          child: Container(
+                            padding: const EdgeInsets.all(20),
+                            child: Column(
+                              children: [
+                                Image.asset(
+                                  "assets/images/hrslogo.jpg",
+                                  scale: 2,
+                                )
+                              ],
+                            ),
+                          ),
+                        ),
+                      )
+                    ],
+                  ),
+                  Container(
+                    width: double.infinity,
+                    padding: const EdgeInsets.all(22),
+                    color: Colors.black,
+                    child: Center(
+                        child: Column(
+                          children: [
+                            Row(
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Container(
+                                  padding: const EdgeInsets.all(16),
+                                  child: TextButton(onPressed: (){
+                                    const String url = 'https://www.instagram.com/herorickystudios/';
 
-          html.window.open(url, '_blank');
-        },
-        backgroundColor: Colors.transparent,
-        child: Image.asset(
-            'assets/images/logos/whatsapp green.png',
-          scale: 1,
+                                    html.window.open(url, '_blank');
+                                  }, child: Image.asset(
+                                    'assets/images/logos/instagram.png',
+                                    scale: 15,
+                                  )
+                                  ),
+                                ),
+                                Container(
+                                  padding: const EdgeInsets.all(16),
+                                  child: TextButton(onPressed: (){
+                                    const String url = 'https://wa.me/5511942980456';
+
+                                    html.window.open(url, '_blank');
+                                  }, child: Image.asset(
+                                    'assets/images/logos/whatsapp.png',
+                                    scale: 15,
+                                  )
+                                  ),
+                                ),
+                                Container(
+                                  padding: const EdgeInsets.all(16),
+                                  child: TextButton(onPressed: (){
+                                    const String url = 'https://youtube.com/@herorickygames';
+
+                                    html.window.open(url, '_blank');
+                                  }, child: Image.asset(
+                                    'assets/images/logos/youtube.png',
+                                    scale: 15,
+                                  )
+                                  ),
+                                ),
+                              ],
+                            ),
+                            const Text('Copyright© H Technology - 2023'),
+                          ],
+                        )
+                    ),
+                  )
+                ],
+              ),
+            ),
+          ),
+          floatingActionButton: FloatingActionButton(
+            onPressed: () async {
+              const String url = 'https://wa.me/5511942980456';
+
+              html.window.open(url, '_blank');
+            },
+            backgroundColor: Colors.transparent,
+            child: Image.asset(
+              'assets/images/logos/whatsapp green.png',
+              scale: 1,
+            ),
+          ),
         ),
       ),
     );

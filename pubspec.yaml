@@ -36,6 +36,7 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
   fluid_kit: ^3.0.0
+  seo: ^0.0.5
 
 
 dev_dependencies:
