@@ -7,4 +7,3 @@ Também trabalho com Nativo Android com Java e Kotlin. HTML+CCS para front em si
 Atualmente estou estudando a faculdade de Engenharia de Software na Anhanguera!
 
 Dentre tudo isso na minha historia o que não falta é commit e muita linha de codigo!
-
