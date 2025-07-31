@@ -1,9 +1,9 @@
 # HeroRickyGames
 
-Um desenvolvedor Flutter que trabalha com Android, Web, Windows e Linux
+A Senior developer focused on Flutter, I work with Android, Web, Windows, Linux and IOS!
 
-Também trabalho com Nativo Android com Java e Kotlin. HTML+CCS para front em sites, mau uso, em sites costumo usar o Flutter Web mesmo, NodeJs e Dart para backend.
+I also work with Native Android with Java and Kotlin. HTML+CCS for the front of websites, bad use, on websites I tend to use Flutter Web, NodeJs and Dart for the backend.
 
-Atualmente estou estudando a faculdade de Engenharia de Software na Anhanguera!
+I'm currently studying Software Engineering at Anhanguera!
 
-Dentre tudo isso na minha historia o que não falta é commit e muita linha de codigo!
+Among all this in my history, there is no shortage of commits and lots of lines of code!
