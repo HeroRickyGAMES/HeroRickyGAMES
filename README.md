@@ -6,4 +6,4 @@ I also work with Native Android with Java and Kotlin. HTML+CCS for the front of 
 
 I'm currently studying Software Engineering at Anhanguera!
 
-Among all this in my history, there is no shortage of commits and lots of lines of code!
+Among all this in my history, there is no shortage of commits and lots of millions lines of code!
